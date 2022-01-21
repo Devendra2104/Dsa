@@ -75,5 +75,5 @@ public:
 
 int main(){
 	Solution nw =  Solution();
-	// call above function and give your inputs :_:
+	// call above function and give your inputs
 }
