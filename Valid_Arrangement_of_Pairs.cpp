@@ -67,4 +67,14 @@ public:
 
 int main(){
 	Solution nw = Solution();
+    int n;
+    cin>>n;
+    vector<vector<int>> a(n);
+    for(int i=0;i<n;i++){
+        int x,y;
+        cin>>x>>y;
+        a[i] = {x,y};
+    }
+    vector<vector<int>> ans = nw.validArrangement(a);
+    print(ans);
 }
