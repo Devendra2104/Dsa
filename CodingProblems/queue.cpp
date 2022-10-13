@@ -1,13 +1,12 @@
 #include<bits/stdc++.h>
 #define maxn 10
 
-
-
 int queue[maxn], front = -1, rear = -1;
 
 
 
 void enQueue(int value){
+   if(front > rear) front = rear = -1;
    if(rear == maxn-1)
       printf("\nQueue is Full!!! Insertion is not possible!!!");
    else{
@@ -19,24 +18,24 @@ void enQueue(int value){
 }
 
 void deQueue(){
-   if(front == rear)
+   if(front == -1 || front > rear)
       printf("\nQueue is Empty!!! Deletion is not possible!!!");
    else{
       printf("\nDeleted : %d", queue[front]);
+      queue[front] = 0;
       front++;
-      if(front == rear) front = rear = -1;
    }
 }
 
 
 void display(){
-   if(rear == -1)
+   if(rear == -1 || front > rear)
       printf("\nQueue is Empty!!!");
    else{
       int i;
       printf("\nQueue elements are:\n");
       for(i=front; i<=rear; i++)
-      printf("%d\t",queue[i]);
+         printf("%d\t",queue[i]);
    }
 }
 
