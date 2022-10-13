@@ -10,10 +10,10 @@ const ll inf = 1e18, mod1 = 998244353, mod = 1e9 + 7;
 
 void heapify(int a[], int n, int i){
     int maximum = i; int L = 2*i+1; int R = 2*i+2;
-    if(L<n and a[L] > a[maximum]){
+    if(L<n && a[L] > a[maximum]){
         maximum = L;
     }
-    if(R<n and a[R] > a[maximum]){
+    if(R<n && a[R] > a[maximum]){
         maximum = R;
     }
     if(maximum != i){
@@ -51,14 +51,14 @@ void loop(){
 
     // this is online heap - sort by building heap everytime we insert
 
-    int a[] = {10,20,15,30,40,4,5,610,23,35,89};
-    int n = sizeof(a) / sizeof(a[0]);
-    vector<int> v;
-    for(int i=0;i<n;i++){
-        v.push_back(a[i]);
-        insertHeap(v,i);
-    }
-    cout << v << '\n';
+    // int a[] = {10,20,15,30,40,4,5,610,23,35,89};
+    // int n = sizeof(a) / sizeof(a[0]);
+    // vector<int> v;
+    // for(int i=0;i<n;i++){
+    //     v.push_back(a[i]);
+    //     insertHeap(v,i);
+    // }
+    // cout << v << '\n';
 }           
 
 
